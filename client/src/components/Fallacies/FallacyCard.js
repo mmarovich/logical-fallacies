@@ -14,8 +14,11 @@ import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
+import LiveTvIcon from '@material-ui/icons/LiveTv';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import YouTube from 'react-youtube';
 
 const styles = theme => ({
   card: {
@@ -37,24 +40,32 @@ const styles = theme => ({
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: 'rotate(90deg)',
   },
   avatar: {
     backgroundColor: red[500],
   },
   title: {
-      fontWeight: 'bold',
-      fontSize: 20,
-      textTransform: 'capitalize'
+    fontWeight: 'bold',
+    fontSize: 20,
+    textTransform: 'capitalize'
   }
 });
 
 class FallacyCard extends React.Component {
-  state = { expanded: false };
-
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
+  state = {
+    examplesExpanded: false,
+    videosExpanded: false
   };
+
+  handleExpandClick = toggle => {
+    this.setState(state => ({ [toggle]: !state[toggle] }));
+  };
+
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 
   render() {
     const { classes, fallacy } = this.props;
@@ -74,7 +85,7 @@ class FallacyCard extends React.Component {
           }
           title={fallacy.fallacy}
           subheader={fallacy.translation ? `or "${fallacy.translation}"` : null}
-          classes={{title: classes.title}}
+          classes={{ title: classes.title }}
         />
         <CardMedia
           className={classes.media}
@@ -95,40 +106,75 @@ class FallacyCard extends React.Component {
           </IconButton>
           <IconButton
             className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
+              [classes.expandOpen]: this.state.examplesExpanded,
             })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
+            onClick={() => this.handleExpandClick("examplesExpanded")}
+            aria-expanded={this.state.examplesExpanded}
             aria-label="Show more"
           >
-            <ExpandMoreIcon />
+            <SpeakerNotesIcon />
+          </IconButton>
+          <IconButton
+            className={classnames(classes.expand, {
+              [classes.expandOpen]: this.state.videosExpanded,
+            })}
+            onClick={() => this.handleExpandClick("videosExpanded")}
+            aria-expanded={this.state.videosExpanded}
+            aria-label="Show more"
+          >
+            <LiveTvIcon />
           </IconButton>
         </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+        <Collapse in={this.state.examplesExpanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Method:</Typography>
-            <Typography paragraph>
-              Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-              minutes.
-            </Typography>
-            <Typography paragraph>
-              Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-              heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-              browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving
-              chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion,
-              salt and pepper, and cook, stirring often until thickened and fragrant, about 10
-              minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-            </Typography>
-            <Typography paragraph>
-              Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-              without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat
-              to medium-low, add reserved shrimp and mussels, tucking them down into the rice, and
-              cook again without stirring, until mussels have opened and rice is just tender, 5 to 7
-              minutes more. (Discard any mussels that don’t open.)
-            </Typography>
-            <Typography>
-              Set aside off of the heat to let rest for 10 minutes, and then serve.
-            </Typography>
+            <CardHeader
+              title="Similar"
+              classes={{ title: classes.title }}
+            />
+            <Typography paragraph><i>{fallacy.similar.join(",  ")}</i></Typography>
+
+            <CardHeader
+              title="Brief Examples"
+              classes={{ title: classes.title }}
+            />
+
+            {fallacy.examples.map((quote) => {
+              return <Typography paragraph>"{quote}"</Typography>
+            })}
+
+          </CardContent>
+        </Collapse>
+        <Collapse in={this.state.videosExpanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <CardHeader
+              title="Explainations"
+              classes={{ title: classes.title }}
+            />
+            {fallacy.explained.map((video) => {
+              return <YouTube
+                videoId={video}
+                opts={{
+                  height: '100%',
+                  width: '100%',
+                  playerVars: { color: 'white' }
+                }}
+              />
+            })}
+
+            <CardHeader
+              title="Examples"
+              classes={{ title: classes.title }}
+            />
+            {fallacy.real_life.map((video) => {
+              return <YouTube
+                videoId={video}
+                opts={{
+                  height: '100%',
+                  width: '100%',
+                  playerVars: { color: 'white' }
+                }}
+              />
+            })}
           </CardContent>
         </Collapse>
       </Card>

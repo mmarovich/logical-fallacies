@@ -6,7 +6,8 @@ const fallacies = [
         description: `argument is avoided by attacking the character, motive, or other attribute of the person making the argument, 
 or persons associated with the argument, rather than attacking the substance of the argument itself.`,
         similar: ["tu quoque", "circumstantial", "guilt by association", "abusive fallacy"],
-        videos: ["https://www.youtube.com/watch?v=FD50OTR3arY", "https://www.youtube.com/watch?v=IEQDP2pYrmM"],
+        explained: ["FD50OTR3arY", "IEQDP2pYrmM"],
+        real_life: ["SVhTAY0R_SE"],
         articles: [
             {
                 source: "Wikipedia",
@@ -25,7 +26,8 @@ or persons associated with the argument, rather than attacking the substance of 
         description: `argument is avoided by attacking another argument entirely. One who engages in this fallacy is said to be 
 "attacking a straw man."`,
         similar: ["fallacy of relevance", "slippery slope", "quoting out of context"],
-        videos: ["https://www.youtube.com/watch?v=hfil34ayaEU", "https://www.youtube.com/watch?v=D312ssRfWMA"],
+        explained: ["hfil34ayaEU", "D312ssRfWMA", "5gVze3BvjZA"],
+        real_life: ["5ln7chQuKyg"],
         articles: [
             {
                 source: "Wikipedia",
@@ -49,7 +51,8 @@ would make the slightest difference.`
         description: `asserts that a proposition is true because it has not yet been proven false or a proposition is false because 
 it has not yet been proven true.`,
         similar: ["appeal to the stone", "from incredulity", "from silence"],
-        videos: ["https://www.youtube.com/watch?v=p9ezNBBcg_g"],
+        explained: ["p9ezNBBcg_g", "LCCijKuS5YA"],
+        real_life: ["rB2jmuZAJtw"],
         articles: [
             {
                 source: "Wikipedia",
@@ -68,7 +71,8 @@ just misunderstood.`
         image: require(`../../assets/false-dilemma.jpg`),
         description: `two alternative statements are held to be the only possible options when in reality there are more.`,
         similar: ["false dichotomy", "fallacy of bifurcation", "black-or-white fallacy", "either/or fallacy", "black-and-white thinking"],
-        videos: ["https://www.youtube.com/watch?v=XIyLqUOJ0lY", "https://www.youtube.com/watch?v=9ua74hdBhfI", "https://www.youtube.com/watch?v=Dln3DJEcghY"],
+        explained: ["XIyLqUOJ0lY", "9ua74hdBhfI"],
+        real_life: ["Dln3DJEcghY", "MSLeb9sxxu8"],
         articles: [
             {
                 source: "Wikipedia",
@@ -87,7 +91,8 @@ just misunderstood.`
         description: `assertion that a relatively small first step leads to a chain of related events culminating in some significant 
 (usually negative) effect.`,
         similar: ["thin edge of the wedge", "camel's nose", "domino fallacy", "dam burst"],
-        videos: ["https://www.youtube.com/watch?v=t2ePCnSyQ4w", "https://www.youtube.com/watch?v=kIv3m2gMgUU"],
+        explained: ["t2ePCnSyQ4w"],
+        real_life: ["kIv3m2gMgUU"],
         articles: [
             {
                 source: "Wikipedia",
@@ -111,7 +116,8 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
         image: require(`../../assets/petitio-principii.jpg`),
         description: `argument is just repeating what they already assumed beforehand`,
         similar: ["begging the question", "circular argument"],
-        videos: ["https://www.youtube.com/watch?v=IJ2dWrI-PTA", "https://www.youtube.com/watch?v=c_fOyxk7DdU", "https://www.youtube.com/watch?v=OAXKc-rvMa8"],
+        explained: ["IJ2dWrI-PTA", "c_fOyxk7DdU", "OAXKc-rvMa8"],
+        real_life: ["OAVp6gnIgHY"],
         articles: [
             {
                 source: "Wikipedia",
