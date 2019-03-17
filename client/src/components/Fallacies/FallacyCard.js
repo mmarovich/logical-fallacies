@@ -23,7 +23,7 @@ import Videos from './Videos';
 const styles = theme => ({
   card: {
     maxWidth: 400,
-    margin: '20px 0 0 20px'
+    margin: '10px'
   },
   media: {
     height: 0,
