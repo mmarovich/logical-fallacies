@@ -35,7 +35,7 @@ or persons associated with the argument, rather than attacking the substance of 
             }
         ],
         examples: [
-            `A: We should relax the laws on beer. |B: No, any society with unrestricted access to intoxicants loses its work ethic 
+            `A: We should relax the laws on beer.|B: No, any society with unrestricted access to intoxicants loses its work ethic 
 and goes only for immediate gratification.`,
             `I submit to you that if you can't take this evidence and find these defendants guilty on this evidence then we might 
 as well open all the banks and say, "Come on and get the money, boys," because we'll never be able to convict them.`,
@@ -144,8 +144,28 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
             }
         ],
         examples: [
-            `X is true for A | X is true for B | therefore, X is true for C, D, E, etc`,
+            `X is true for A|X is true for B|therefore, X is true for C, D, E, etc`,
             `People nowadays only vote with their emotions instead of their brains.`
+        ]
+    }, 
+    {
+        fallacy: "ignoratio elenchi",
+        translation: "ignoring refutation",
+        image: require(`../../assets/ignoratio-elenchi.jpg`),
+        description: `presenting an argument that may or may not be logically valid and sound, but (whose conclusion) fails to 
+address the issue in question.`,
+        similar: ["missing the point", "red herring", "irrelevant conclusion"],
+        explained: ["9FlerH-fp5k", "UzroWL3NlZA"],
+        real_life: ["zLS-npemQYQ"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Irrelevant_conclusion"
+            }
+        ],
+        examples: [
+            `There is no point in people ranting on social media about politics; the president is not going to read it anyway.`,
+            `A: Does the law allow me to do that?|B: The law should allow you to do that because this and that.`
         ]
     }
 ]

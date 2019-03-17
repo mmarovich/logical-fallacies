@@ -139,7 +139,10 @@ class FallacyCard extends React.Component {
             />
 
             {fallacy.examples.map((quote, i) => {
-              return <Typography key={i} paragraph>"{quote}"</Typography>
+              return <div>
+                  <i>{quote.split("|").map((line) => <Typography key={i} paragraph>{line}</Typography>)}</i>
+                  {fallacy.examples.length !== i+1 ? <hr /> : null}
+                </div>
             })}
 
           </CardContent>
