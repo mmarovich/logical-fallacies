@@ -147,7 +147,7 @@ class FallacyCard extends React.Component {
         <Collapse in={this.state.videosExpanded} timeout="auto" unmountOnExit>
           <CardContent>
             <CardHeader
-              title="Explainations"
+              title="Explanations"
               classes={{ title: classes.title }}
             />
             {fallacy.explained.map((video) => {
