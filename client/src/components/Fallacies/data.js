@@ -21,7 +21,7 @@ or persons associated with the argument, rather than attacking the substance of 
     },
     {
         fallacy: "straw man",
-        translation: null,
+        translation: "",
         image: require(`../../assets/straw-man.jpg`),
         description: `argument is avoided by attacking another argument entirely. One who engages in this fallacy is said to be 
 "attacking a straw man."`,
@@ -67,7 +67,7 @@ just misunderstood.`
     },
     {
         fallacy: "false dilemma",
-        translation: null,
+        translation: "",
         image: require(`../../assets/false-dilemma.jpg`),
         description: `two alternative statements are held to be the only possible options when in reality there are more.`,
         similar: ["false dichotomy", "fallacy of bifurcation", "black-or-white fallacy", "either/or fallacy", "black-and-white thinking"],
@@ -86,7 +86,7 @@ just misunderstood.`
     },
     {
         fallacy: "slippery slope",
-        translation: null,
+        translation: "",
         image: require(`../../assets/slippery-slope.jpg`),
         description: `assertion that a relatively small first step leads to a chain of related events culminating in some significant 
 (usually negative) effect.`,
@@ -127,6 +127,25 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
         examples: [
             `Africa is the largest continent because it has the largest area of any continent.`,
             `Left-handed people are better painters because right-handed people can't paint as well.`
+        ]
+    },
+    {
+        fallacy: "hasty generalization",
+        translation: "",
+        image: require(`../../assets/hasty-generalization.jpg`),
+        description: `faulty generalization by reaching an inductive generalization based on insufficient evidence`,
+        similar: ["faulty generalization", "jumping to conclusions", "inductive fallacy", "overwhelming exception", "biased sample", "misleading vividness"],
+        explained: ["b_UqIfw7Zmw"],
+        real_life: ["KqeqTWD2Ymg", "WfuHuFx31rE"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Faulty_generalization#Hasty_generalization"
+            }
+        ],
+        examples: [
+            `X is true for A | X is true for B | therefore, X is true for C, D, E, etc`,
+            `People nowadays only vote with their emotions instead of their brains.`
         ]
     }
 ]

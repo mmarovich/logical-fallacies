@@ -18,7 +18,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import YouTube from 'react-youtube';
+import Videos from './Videos';
 
 const styles = theme => ({
   card: {
@@ -138,8 +138,8 @@ class FallacyCard extends React.Component {
               classes={{ title: classes.title }}
             />
 
-            {fallacy.examples.map((quote) => {
-              return <Typography paragraph>"{quote}"</Typography>
+            {fallacy.examples.map((quote, i) => {
+              return <Typography key={i} paragraph>"{quote}"</Typography>
             })}
 
           </CardContent>
@@ -150,31 +150,16 @@ class FallacyCard extends React.Component {
               title="Explanations"
               classes={{ title: classes.title }}
             />
-            {fallacy.explained.map((video) => {
-              return <YouTube
-                videoId={video}
-                opts={{
-                  height: '100%',
-                  width: '100%',
-                  playerVars: { color: 'white' }
-                }}
-              />
-            })}
+            
+            <Videos videoType={fallacy.explained} />
 
             <CardHeader
               title="Examples"
               classes={{ title: classes.title }}
             />
-            {fallacy.real_life.map((video) => {
-              return <YouTube
-                videoId={video}
-                opts={{
-                  height: '100%',
-                  width: '100%',
-                  playerVars: { color: 'white' }
-                }}
-              />
-            })}
+
+            <Videos videoType={fallacy.real_life} />
+
           </CardContent>
         </Collapse>
       </Card>
