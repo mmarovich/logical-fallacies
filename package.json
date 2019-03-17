@@ -1,5 +1,5 @@
 {
-  "name": "mern-starter",
+  "name": "logical-fallacies",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mmarovich/MERN-starter.git"
+    "url": "git+https://github.com/mmarovich/logical-fallacies.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mmarovich/MERN-starter/issues"
+    "url": "https://github.com/mmarovich/logical-fallacies/issues"
   },
-  "homepage": "https://github.com/mmarovich/MERN-starter#readme",
+  "homepage": "https://github.com/mmarovich/logical-fallacies#readme",
   "devDependencies": {
     "concurrently": "^3.6.1",
     "nodemon": "^1.18.4"
