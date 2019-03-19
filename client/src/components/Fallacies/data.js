@@ -15,8 +15,12 @@ or persons associated with the argument, rather than attacking the substance of 
             }
         ],
         examples: [
-            `MacDougal roots for a British football team. Clearly he’s unfit to be a police chief in Ireland.`,
-            `All people from Crete are liars`
+            `A: Because dark chocolate has antioxidants and most other candies only have sugar, which
+rots your teeth, dark chocolate is therefore better than most sweets.`,
+            `Abusive - B: Yeah, but you're a greedy jerk!`,
+            `Circumstantial - B: Yeah, but you work for the chocolate company. You get paid to say that.`,
+            `Tu quoque - B: But I saw you eating a candy cane.`,
+            `Association - B: Nazis also believed dark chocolate was better.`
         ]
     },
     {
@@ -39,9 +43,7 @@ or persons associated with the argument, rather than attacking the substance of 
 and goes only for immediate gratification.`,
             `I submit to you that if you can't take this evidence and find these defendants guilty on this evidence then we might 
 as well open all the banks and say, "Come on and get the money, boys," because we'll never be able to convict them.`,
-            `The Senator thinks we can solve all our ecological problems by driving a Prius.`,
-            `Quite the contrary, the Senator thinks the environment is such a wreck that no one’s car choice or driving habits 
-would make the slightest difference.`
+            `The Senator thinks we can solve all our ecological problems by driving a Prius.`
         ]
     },
     {
@@ -60,9 +62,9 @@ it has not yet been proven true.`,
             }
         ],
         examples: [
-            `We have no evidence that the Illuminati ever existed. They must have been so clever they destroyed all the evidence.`,
-            `I know nothing about Tank Johnson except that he has a criminal record as long as your leg, but I’ll bet he’s really 
-just misunderstood.`
+            `There is no evidence of foul play here.`,
+            `Although we have proven that the moon is not made of spare ribs, we have not proven that its core cannot be filled with them; 
+therefore, the moon’s core is filled with spare ribs.`
         ]
     },
     {
@@ -166,6 +168,28 @@ address the issue in question.`,
         examples: [
             `There is no point in people ranting on social media about politics; the president is not going to read it anyway.`,
             `A: Does the law allow me to do that?|B: The law should allow you to do that because this and that.`
+        ]
+    },
+    {
+        fallacy: "tu quoque",
+        translation: "you also",
+        image: require(`../../assets/tu-quoque.jpg`),
+        description: `intends to discredit the opponent's argument by asserting the opponent's failure to act consistently in 
+accordance with it's conclusion(s).`,
+        similar: ["ad hominem", "appeal to hypocrisy"],
+        explained: ["Pu57QqzNOHQ", "FD50OTR3arY"],
+        real_life: ["JhzEYFvO8Pc", "tKO8nMNmgWM"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Tu_quoque"
+            }
+        ],
+        examples: [
+            `Person A makes claim X.|Person B asserts that A's actions or past claims are inconsistent with the truth of claim X.|Therefore, 
+X is false.`,
+            `A: B is guilty of defrauding the government out of tax dollars.|B: How can you say that when you yourself have 20 outstanding 
+parking tickets?`
         ]
     }
 ]
