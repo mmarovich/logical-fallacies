@@ -176,7 +176,7 @@ address the issue in question.`,
         image: require(`../../assets/tu-quoque.jpg`),
         description: `intends to discredit the opponent's argument by asserting the opponent's failure to act consistently in 
 accordance with it's conclusion(s).`,
-        similar: ["ad hominem", "appeal to hypocrisy"],
+        similar: ["argumentum ad hominem", "appeal to hypocrisy"],
         explained: ["Pu57QqzNOHQ", "FD50OTR3arY"],
         real_life: ["JhzEYFvO8Pc", "tKO8nMNmgWM"],
         articles: [
