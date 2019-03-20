@@ -191,6 +191,26 @@ X is false.`,
             `A: B is guilty of defrauding the government out of tax dollars.|B: How can you say that when you yourself have 20 outstanding 
 parking tickets?`
         ]
+    },
+    {
+        fallacy: "cum hoc ergo propter hoc",
+        translation: "with this, therefore because of this",
+        image: require(`../../assets/cum-hoc-ergo-propter-hoc.jpg`),
+        description: `when two events occurring together are taken to have established a cause-and-effect relationship.`,
+        similar: ["post hoc ergo propter hoc", "causal fallacy", "false cause", "questionable cause", "reverse causation", "wrong direction"],
+        explained: ["h9AGegx8izY", "5A7hSaoRv0g"],
+        real_life: ["vRJUvFG8gbE", "HL_vHDjG5Wk"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation"
+            }
+        ],
+        examples: [
+            `Young children who sleep with the light on are much more likely to develop myopia in later life.|Therefore, sleeping with the light 
+on causes myopia.`,
+            `The faster windmills are observed to rotate, the more wind is observed to be.|Therefore wind is caused by the rotation of windmills.`
+        ]
     }
 ]
 
