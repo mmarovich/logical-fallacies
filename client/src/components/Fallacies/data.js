@@ -1,5 +1,27 @@
 const fallacies = [
     {
+        fallacy: "sunk cost fallacy",
+        translation: "",
+        image: require(`../../assets/sunk-cost.jpg`),
+        description: `argument that further investment is warranted on the fact that the resources already invested will be lost 
+otherwise, despite what future losses may occur.`,
+        similar: ["argument from inertia", "concorde fallacy", "finish the job fallacy", "loss aversion"],
+        explained: ["vpnxd31y0Fo", "xXpzfy5oKWg"],
+        real_life: ["NZIaLkOrA68", "EMcDOE13AN8"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Sunk_cost#Loss_aversion_and_the_sunk_cost_fallacy"
+            }
+        ],
+        examples: [
+            `I've already invested so much time in building a website collecting logical fallacy cards, so I can't stop now!`,
+            `I have already paid a consultant $1000 to look into the pros and cons of starting that new business division.  He 
+advised that I shouldn’t move forward with it because it is a declining market.  However, if I don’t move forward, that $1000 
+would have been wasted, so I better move forward anyway.`
+        ]
+    },
+    {
         fallacy: "argumentum ad hominem",
         translation: "to the man",
         image: require(`../../assets/ad-hominem.jpg`),
