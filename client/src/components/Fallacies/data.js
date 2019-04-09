@@ -1,5 +1,24 @@
 const fallacies = [
     {
+        fallacy: "argumentum ad verecundiam",
+        translation: "to modesty",
+        image: require(`../../assets/argumentum-ad-verecundiam.png`),
+        description: `a claimed authority's support is used as evidence for an argument's conclusion`,
+        similar: ["argument from authority", "appeal to authority", "authority fallacy"],
+        explained: ["_mEfVIftnR0", "mgqM6xeZHNM"],
+        real_life: ["lwItkwJk6KM", "N5k4yUSPHI8"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Argument_from_authority"
+            }
+        ],
+        examples: [
+            `Because Martin Sheen played the president on Television, he’d probably make a great president in real life.`,
+            `One day robots will enslave us all. It’s true. My computer science teacher says so.`
+        ]
+    },
+    {
         fallacy: "sunk cost fallacy",
         translation: "",
         image: require(`../../assets/sunk-cost.jpg`),
