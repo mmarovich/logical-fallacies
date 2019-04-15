@@ -1,5 +1,26 @@
 const fallacies = [
     {
+        fallacy: "equivocation",
+        translation: "",
+        image: require(`../../assets/equivocation.jpg`),
+        description: `the use of a particular word/expression in multiple senses throughout an argument leading to a 
+false conclusion.`,
+        similar: [],
+        explained: ["kXlIAXx5TXE", "pX7yr94mDCs"],
+        real_life: ["CWZDX1A0MD4", "kTcRRaXV-fg"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Equivocation"
+            }
+        ],
+        examples: [
+            `Only man is rational. No woman is a man. Therefore, no woman is rational.`,
+            `All jackasses have long ears. Carl is a jackass. Therefore, Carl has long ears.`,
+            `Some triangles are obtuse.  Therefore, some triangles are not very smart.`
+        ]
+    },
+    {
         fallacy: "argumentum ad verecundiam",
         translation: "to modesty",
         image: require(`../../assets/argumentum-ad-verecundiam.png`),

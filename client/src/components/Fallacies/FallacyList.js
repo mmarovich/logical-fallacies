@@ -22,8 +22,9 @@ class FallacyList extends Component {
 
     renderFallacies = () => {
         const { query, fallacies } = this.state;
+        const q = query.toLowerCase();
         let newFallacies;
-        if (query === "") {
+        if (q === "") {
             newFallacies = fallacies.sort((a, b) => {
                 if (a.fallacy < b.fallacy) { return -1 }
                 if (a.fallacy > b.fallacy) { return 1 }
@@ -32,8 +33,8 @@ class FallacyList extends Component {
         } else {
             newFallacies = fallacies.filter((a) => {
                 let returnIt;
-                if (a.fallacy.includes(query) || a.translation.includes(query) || a.description.includes(query) ||
-                    a.similar.find(x => x.includes(query) === true)) {
+                if (a.fallacy.includes(q) || a.translation.includes(q) || a.description.includes(q) ||
+                    a.similar.find(x => x.includes(q) === true)) {
                     returnIt = true
                 }
 
