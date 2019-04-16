@@ -1,5 +1,26 @@
 const fallacies = [
     {
+        fallacy: "argumentum ad populum",
+        translation: "to the people",
+        image: require(`../../assets/argumentum-ad-populum.png`),
+        description: `concludes that a proposition must be true because many or most people believe it.`,
+        similar: ["appeal to the masses", "appeal to belief", "appeal to the majority", "appeal to democracy", 
+            "appeal to popularity", "argument by consensus", "consensus fallacy", "authority of the many", 
+            "bandwagon fallacy", "vox populi", "argumentum ad numerum", "fickle crowd syndrome", "consensus gentium"],
+        explained: ["aF6EHTtyYqw", "bTt4F-84rJY"],
+        real_life: ["3pSdTuRAdqo", "xkoMdnCS6Og", "nRloYT02yns"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Argumentum_ad_populum"
+            }
+        ],
+        examples: [
+            `But officer, I don't deserve a ticket; everyone goes this speed.`,
+            `Gods must exist, since every culture has some sort of belief in a higher being.`
+        ]
+    },
+    {
         fallacy: "argumentum ad misericordiam",
         translation: "to pity",
         image: require(`../../assets/argumentum-ad-misericordiam.jpg`),
