@@ -1,5 +1,27 @@
 const fallacies = [
     {
+        fallacy: "argumentum ad misericordiam",
+        translation: "to pity",
+        image: require(`../../assets/argumentum-ad-misericordiam.jpg`),
+        description: `win support for an argument or idea by exploiting his or her opponent's feelings of pity or 
+guilt.`,
+        similar: ["appeal to pity", "appeal to emotion", "sob story", "the Galileo Argument"],
+        explained: ["SPN54qYUqng", "cxrqdL-tD-M"],
+        real_life: ["c8TxXR2t_0w", "RybNI0KB1bg"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Appeal_to_pity"
+            }
+        ],
+        examples: [
+            `You must have graded my exam incorrectly. I studied very hard for weeks specifically because I knew 
+my career depended on getting a good grade. If you give me a failing grade I'm ruined!`,
+            `Ladies and gentlemen of the jury, look at this miserable man, in a wheelchair, unable to use his legs. 
+Could such a man really be guilty of embezzlement?`
+        ]
+    },
+    {
         fallacy: "equivocation",
         translation: "",
         image: require(`../../assets/equivocation.jpg`),
