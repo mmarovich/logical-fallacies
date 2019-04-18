@@ -2,6 +2,7 @@ const fallacies = [
     {
         fallacy: "argumentum ad populum",
         translation: "to the people",
+        type: ["informal", "relevance", "redHerring"],
         image: require(`../../assets/argumentum-ad-populum.png`),
         description: `concludes that a proposition must be true because many or most people believe it.`,
         similar: ["appeal to the masses", "appeal to belief", "appeal to the majority", "appeal to democracy", 
@@ -23,6 +24,7 @@ const fallacies = [
     {
         fallacy: "argumentum ad misericordiam",
         translation: "to pity",
+        type: ["informal", "relevance", "redHerring", "appealToEmotion"],
         image: require(`../../assets/argumentum-ad-misericordiam.jpg`),
         description: `win support for an argument or idea by exploiting his or her opponent's feelings of pity or 
 guilt.`,
@@ -45,6 +47,7 @@ Could such a man really be guilty of embezzlement?`
     {
         fallacy: "equivocation",
         translation: "",
+        type: ["informal"],
         image: require(`../../assets/equivocation.jpg`),
         description: `the use of a particular word/expression in multiple senses throughout an argument leading to a 
 false conclusion.`,
@@ -66,6 +69,7 @@ false conclusion.`,
     {
         fallacy: "argumentum ad verecundiam",
         translation: "to modesty",
+        type: ["informal", "relevance", "redHerring"],
         image: require(`../../assets/argumentum-ad-verecundiam.png`),
         description: `a claimed authority's support is used as evidence for an argument's conclusion`,
         similar: ["argument from authority", "appeal to authority", "authority fallacy"],
@@ -85,6 +89,7 @@ false conclusion.`,
     {
         fallacy: "sunk cost fallacy",
         translation: "",
+        type: ["informal"],
         image: require(`../../assets/sunk-cost.jpg`),
         description: `argument that further investment is warranted on the fact that the resources already invested will be lost 
 otherwise, despite what future losses may occur.`,
@@ -107,6 +112,7 @@ would have been wasted, so I better move forward anyway.`
     {
         fallacy: "argumentum ad hominem",
         translation: "to the man",
+        type: ["informal", "relevance", "redHerring"],
         image: require(`../../assets/ad-hominem.jpg`),
         description: `argument is avoided by attacking the character, motive, or other attribute of the person making the argument, 
 or persons associated with the argument, rather than attacking the substance of the argument itself.`,
@@ -131,6 +137,7 @@ rots your teeth, dark chocolate is therefore better than most sweets.`,
     {
         fallacy: "straw man",
         translation: "",
+        type: ["informal"],
         image: require(`../../assets/straw-man.jpg`),
         description: `argument is avoided by attacking another argument entirely. One who engages in this fallacy is said to be 
 "attacking a straw man."`,
@@ -154,6 +161,7 @@ as well open all the banks and say, "Come on and get the money, boys," because w
     {
         fallacy: "argumentum ad ignorantiam",
         translation: "to ignorance",
+        type: ["informal", "relevance"],
         image: require(`../../assets/ad-ignorantium.jpg`),
         description: `asserts that a proposition is true because it has not yet been proven false or a proposition is false because 
 it has not yet been proven true.`,
@@ -175,6 +183,7 @@ therefore, the moon’s core is filled with spare ribs.`
     {
         fallacy: "false dilemma",
         translation: "",
+        type: ["informal"],
         image: require(`../../assets/false-dilemma.jpg`),
         description: `two alternative statements are held to be the only possible options when in reality there are more.`,
         similar: ["false dichotomy", "fallacy of bifurcation", "black-or-white fallacy", "either/or fallacy", "black-and-white thinking"],
@@ -194,6 +203,7 @@ therefore, the moon’s core is filled with spare ribs.`
     {
         fallacy: "slippery slope",
         translation: "",
+        type: ["informal"],
         image: require(`../../assets/slippery-slope.jpg`),
         description: `assertion that a relatively small first step leads to a chain of related events culminating in some significant 
 (usually negative) effect.`,
@@ -220,6 +230,7 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
     {
         fallacy: "petitio principii",
         translation: "assuming the initial point",
+        type: ["informal", "improperPremise"],
         image: require(`../../assets/petitio-principii.jpg`),
         description: `argument is just repeating what they already assumed beforehand`,
         similar: ["begging the question", "circular argument"],
@@ -239,6 +250,7 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
     {
         fallacy: "hasty generalization",
         translation: "",
+        type: ["informal", "faultyGeneralization"],
         image: require(`../../assets/hasty-generalization.jpg`),
         description: `faulty generalization by reaching an inductive generalization based on insufficient evidence`,
         similar: ["faulty generalization", "jumping to conclusions", "inductive fallacy", "overwhelming exception", "biased sample", "misleading vividness"],
@@ -258,6 +270,7 @@ the story of Adam and Eve literally, before the phrase, “that chicken looks de
     {
         fallacy: "ignoratio elenchi",
         translation: "ignoring refutation",
+        type: ["informal", "relevance"],
         image: require(`../../assets/ignoratio-elenchi.jpg`),
         description: `presenting an argument that may or may not be logically valid and sound, but (whose conclusion) fails to 
 address the issue in question.`,
@@ -278,6 +291,7 @@ address the issue in question.`,
     {
         fallacy: "tu quoque",
         translation: "you also",
+        type: ["informal", "relevance", "redHerring"],
         image: require(`../../assets/tu-quoque.jpg`),
         description: `intends to discredit the opponent's argument by asserting the opponent's failure to act consistently in 
 accordance with it's conclusion(s).`,
@@ -300,6 +314,7 @@ parking tickets?`
     {
         fallacy: "cum hoc ergo propter hoc",
         translation: "with this, therefore because of this",
+        type: ["informal", "questionableCause"],
         image: require(`../../assets/cum-hoc-ergo-propter-hoc.jpg`),
         description: `when two events occurring together are taken to have established a cause-and-effect relationship.`,
         similar: ["post hoc ergo propter hoc", "causal fallacy", "false cause", "questionable cause", "reverse causation", "wrong direction"],

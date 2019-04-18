@@ -19,6 +19,9 @@ import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Videos from './Videos';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
+import definitions from './definitions';
 
 const styles = theme => ({
   card: {
@@ -50,6 +53,9 @@ const styles = theme => ({
     fontWeight: 'bold',
     fontSize: 20,
     textTransform: 'capitalize'
+  },
+  customWidth: {
+    maxWidth: 300,
   }
 });
 
@@ -68,16 +74,36 @@ class FallacyCard extends React.Component {
     event.target.pauseVideo();
   }
 
+  renderToolTip = (fallacy) => {
+    let array = []
+    fallacy.type.forEach((type, i) => {
+      if (Object.keys(definitions).includes(type)) {
+        array.push(definitions[type])
+      }
+    })
+    return array.map((def, i) => {
+      return <p key={i}>{def}</p>
+    })
+  }
+
   render() {
     const { classes, fallacy } = this.props;
+    const terms = Object.keys(definitions)
 
     return (
       <Card className={classes.card}>
         <CardHeader
           avatar={
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              R
-            </Avatar>
+            <Tooltip
+              TransitionComponent={Zoom}
+              title={this.renderToolTip(fallacy)}
+              placement="right-start"
+              classes={{ tooltip: classes.customWidth }}
+            >
+              <Avatar aria-label="Recipe" className={classes.avatar}>
+                {fallacy.type[0] === "informal" ? `I` : `F`}
+              </Avatar>
+            </Tooltip>
           }
           action={
             <IconButton>
@@ -137,10 +163,10 @@ class FallacyCard extends React.Component {
             />
 
             {fallacy.examples.map((quote, i) => {
-              return <div>
-                  <i>{quote.split("|").map((line) => <Typography key={i} paragraph>{line}</Typography>)}</i>
-                  {fallacy.examples.length !== i+1 ? <hr /> : null}
-                </div>
+              return <div key={i}>
+                <i>{quote.split("|").map((line) => <Typography key={i} paragraph>{line}</Typography>)}</i>
+                {fallacy.examples.length !== i + 1 ? <hr /> : null}
+              </div>
             })}
 
           </CardContent>
@@ -151,7 +177,7 @@ class FallacyCard extends React.Component {
               title="Explanations"
               classes={{ title: classes.title }}
             />
-            
+
             <Videos videoType={fallacy.explained} />
 
             <CardHeader
