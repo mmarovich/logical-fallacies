@@ -95,6 +95,8 @@ class FallacyCard extends React.Component {
         <CardHeader
           avatar={
             <Tooltip
+              disableFocusListener
+              disableTouchListener
               TransitionComponent={Zoom}
               title={this.renderToolTip(fallacy)}
               placement="right-start"
