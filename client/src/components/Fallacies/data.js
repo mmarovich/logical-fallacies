@@ -1,5 +1,26 @@
 const fallacies = [
     {
+        fallacy: "appeal to probability",
+        translation: "",
+        type: ["formal"],
+        image: require(`../../assets/appeal-to-probability.jpg`),
+        description: `taking something for granted because it would probably be the case (or might possibly be 
+the case)`,
+        similar: ["appeal to possibility"],
+        explained: ["xG8MwrQAPXo"],
+        real_life: ["kS7w38-2zZ0"],
+        articles: [
+            {
+                source: "Wikipedia",
+                url: "https://en.wikipedia.org/wiki/Appeal_to_probability"
+            }
+        ],
+        examples: [
+            `Something can go wrong. Therefore, something will go wrong.`,
+            `If I do not bring my umbrella, it will rain.`
+        ]
+    },
+    {
         fallacy: "argumentum ad populum",
         translation: "to the people",
         type: ["informal", "relevance", "redHerring"],
